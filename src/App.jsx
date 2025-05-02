@@ -5,11 +5,13 @@ import MainPage from './pages/MainPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import NotFound from './pages/NotFound';
+import Nav from './components/common/Nav';
 
 function App() {
   return (
     <BrowserRouter>
       {/* Nav 들어갈 자리 */}
+      <Nav />
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/login" element={<LoginPage />} />
