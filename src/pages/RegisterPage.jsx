@@ -48,28 +48,99 @@ const ActionButton = styled.button`
 `;
 
 const RegisterPage = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
+  const [age, setAge] = useState('');
+  const [error, setError] = useState('');
+  const history = useHistory(); // 페이지 이동을 위한 history 객체
+
+  // 유효성 검사
+  const validateForm = () => {
+    if (!username || !password || !name || !age) {
+      return '모든 필드를 입력해 주세요.';
+    }
+
+    if (password.length < 7) {
+      return '비밀번호는 7자 이상이어야 합니다.';
+    }
+
+    if (!/^\d+$/.test(age)) {
+      return '나이는 숫자만 입력할 수 있습니다.';
+    }
+
+    return ''; // 에러 없으면 빈 문자열 반환
+  };
+
+  // 회원가입 처리
+  const handleRegister = async (e) => {
+    e.preventDefault();
+
+    const validationError = validateForm(); // 폼 유효성 검사
+    if (validationError) {
+      setError(validationError); // 유효성 검사 실패 시 에러 메시지 설정
+      return;
+    }
+
+    try {
+      // 사용자 정보를 json-server로 POST 요청
+      const response = await axios.post('http://localhost:5000/users', {
+        username,
+        password,
+        name,
+        age,
+      });
+
+      // 회원가입 성공 시 로그인 페이지로 이동
+      history.push('/login');
+    } catch (error) {
+      setError('회원가입 실패. 다시 시도해 주세요.');
+    }
+  };
+
   return (
     <Container>
       <h2>회원가입</h2>
-      <form action="post">
+      <form action="post" onSubmit={handleRegister}>
         <Label htmlFor="">아이디</Label>
         <InputBox>
-          <Input type="text" placeholder="아이디를 입력하세요." />
+          <Input 
+            type="text" 
+            placeholder="아이디를 입력하세요." 
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
         </InputBox>
         <Label htmlFor="">비밀번호</Label>
         <InputBox>
-          <Input type="text" placeholder="비밀번호를 입력하세요." />
+          <Input
+            type="password"
+            placeholder="비밀번호를 입력하세요."
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </InputBox>
         <Label htmlFor="">이름</Label>
         <InputBox>
-          <Input type="text" placeholder="이름를 입력하세요." />
+          <Input 
+            type="text"
+            placeholder="이름을 입력하세요."
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
         </InputBox>
         <Label htmlFor="">나이</Label>
         <InputBox>
-          <Input type="text" placeholder="나이를 입력하세요." />
+          <Input 
+            type="number"
+            placeholder="나이를 입력하세요."
+            value={age}
+            onChange={(e) => setAge(e.target.value)}
+          />
         </InputBox>
         <ActionButton>회원가입</ActionButton>
       </form>
+      {error && <div style={{ color: 'red' }}>{error}</div>} {/* 에러 메시지 표시 */}
     </Container>
   );
 };

@@ -14,14 +14,15 @@ const Container = styled.div`
 
 const PlanCreatePage = () => {
   return (
-    <APIProvider apiKey={import.meta.env.VITE_GOOGLEMAP_API_KEY}>
-      <Container>
-        <GoogleMap></GoogleMap>
-        <div>
-          <h2>안녕</h2>
-        </div>
-      </Container>
-    </APIProvider>
+    // <APIProvider apiKey={import.meta.env.VITE_GOOGLEMAP_API_KEY}>
+    //   <Container>
+    //     <GoogleMap></GoogleMap>
+    //     <div>
+    //       <h2>안녕</h2>
+    //     </div>
+    //   </Container>
+    // </APIProvider>
+    <GoogleMap></GoogleMap>
   );
 };
 
