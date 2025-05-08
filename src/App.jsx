@@ -7,6 +7,8 @@ import RegisterPage from './pages/RegisterPage';
 import NotFound from './pages/NotFound';
 import Nav from './components/common/Nav';
 import PlanCreatePage from './pages/PlanCreatePage';
+import MyPage from './pages/MyPage';
+import PlanDetailPage from './pages/PlanDetailPage';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/createPlan" element={<PlanCreatePage />} />
+        <Route path="/mypage" element={<MyPage />} />
+        <Route path="/detail/:id" element={<PlanDetailPage />}></Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

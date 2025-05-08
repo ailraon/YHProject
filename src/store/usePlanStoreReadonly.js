@@ -10,39 +10,9 @@ const useScheduleStore = create((set) => ({
   // endDate : "",
   // thumnailImg : "",
 
-  // 불러와서 저장 init
-  initSchedule: (schedule) => {
-    set({ schedule: schedule });
-  },
-
   // 일정 정보 저장
   savePlanDate: (day) => {
     set({ planDays: day });
-  },
-
-  // 빈 배열 생성
-  scheduleArrayCreate: () => {
-    set((state) => {
-      const newSchedule = [...state.schedule];
-      for (let i = 0; i < state.planDays; i++) {
-        if (!newSchedule[i]) {
-          newSchedule[i] = [];
-        }
-      }
-      return { schedule: newSchedule };
-    });
-  },
-
-  // 특정 날짜에 장소 추가
-  addPlaceToDay: (day, place) => {
-    set((state) => {
-      const newSchedule = [...state.schedule];
-      if (!newSchedule[day - 1]) {
-        newSchedule[day - 1] = []; // 날짜 배열이 없으면 새로 생성
-      }
-      newSchedule[day - 1].push(place); // 장소 추가
-      return { schedule: newSchedule };
-    });
   },
 
   // 특정 날짜에서 장소 삭제

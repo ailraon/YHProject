@@ -4,12 +4,87 @@
       "id": "user1",
       "password": "123",
       "name": "HI",
-      "age": 15
+      "age": "16"
     },
     {
-      "id": "483c",
-      "username": "user1",
-      "password": "123"
+      "id": "user2",
+      "password": "1234567",
+      "name": "형일",
+      "age": "16"
+    }
+  ],
+  "plans": [
+    {
+      "id": "20250508135704",
+      "title": "서울 역삼으로 떠나요~",
+      "startDate": "2025-05-08",
+      "endDate": "2025-05-08",
+      "userId": "user1",
+      "thumnailImg": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAeeoHcKG4Ob9eRXT9MQ-qyQP6IYu1Yfu3bgUKHiNnQGwbnZw21aHkF44cWev8XFRujWMneSxxB08c_Zoj3BiaGM_MDy8dh_mE3N6VYvLllSkNsoA5IpLH-B0YIQLuO7Qw3yrke2ElwezzIr1D8GLN0XlQfOilwF--xsEFpt28t1kqChA9fD-gvz8hnGgMe9SKg0tdNuBdjiB4xe2C0aDeo2yY40P-tBTyoq_qAcnVS0P9OYxVpqyR_dcrxe3BCjOLxUtZU4jvHRXGMRUtJwhbOf55PdDgsYwxUTmUhf1m3EmGgEiq9ExqVuiruF4n_pbcgBYp5fACZj5_gcUJBq0Xahu4FEadG8F72nvCTUhXdvHC2om_hNjBoHBltch4aiFa5LmrdSgvo271ul9aiF0wPqtFYE_wf0PpIlAdTGo4UWk0hbhVQQnZXW2wmRoNTC4-jBbzjF516XQBuhST6qXKIPkt8ygTdVrAoRx88sieimOgq3pTRW1UrMB78ORd9XeID8XKZkmkTQ4OhIT6_WR_IhQz0aoNchDU3hKGhWdJn_N1tK7to7UNFGHHorv2BkHKbU0z9369g_I&3u200&4u200&5m1&2e1&callback=none&r_url=http%3A%2F%2Flocalhost%3A5173%2FcreatePlan&key=AIzaSyAK4cbvX2o69KnIi-grh9QEhjw-YrtgICQ&token=93608",
+      "schedule": [
+        [
+          {
+            "id": "ChIJ2UkImh-jfDURNztKmhv_JUY",
+            "name": "모터시티 역삼점",
+            "address": "대한민국 서울특별시 강남구 역삼동 테헤란로 142 지하 1층",
+            "lat": 37.4997187,
+            "lng": 127.0348982,
+            "imgUrl": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAeeoHcKG4Ob9eRXT9MQ-qyQP6IYu1Yfu3bgUKHiNnQGwbnZw21aHkF44cWev8XFRujWMneSxxB08c_Zoj3BiaGM_MDy8dh_mE3N6VYvLllSkNsoA5IpLH-B0YIQLuO7Qw3yrke2ElwezzIr1D8GLN0XlQfOilwF--xsEFpt28t1kqChA9fD-gvz8hnGgMe9SKg0tdNuBdjiB4xe2C0aDeo2yY40P-tBTyoq_qAcnVS0P9OYxVpqyR_dcrxe3BCjOLxUtZU4jvHRXGMRUtJwhbOf55PdDgsYwxUTmUhf1m3EmGgEiq9ExqVuiruF4n_pbcgBYp5fACZj5_gcUJBq0Xahu4FEadG8F72nvCTUhXdvHC2om_hNjBoHBltch4aiFa5LmrdSgvo271ul9aiF0wPqtFYE_wf0PpIlAdTGo4UWk0hbhVQQnZXW2wmRoNTC4-jBbzjF516XQBuhST6qXKIPkt8ygTdVrAoRx88sieimOgq3pTRW1UrMB78ORd9XeID8XKZkmkTQ4OhIT6_WR_IhQz0aoNchDU3hKGhWdJn_N1tK7to7UNFGHHorv2BkHKbU0z9369g_I&3u200&4u200&5m1&2e1&callback=none&r_url=http%3A%2F%2Flocalhost%3A5173%2FcreatePlan&key=AIzaSyAK4cbvX2o69KnIi-grh9QEhjw-YrtgICQ&token=93608"
+          },
+          {
+            "id": "ChIJuQnVIf6jfDUR9kIDlZQHZM4",
+            "name": "타코벨 역삼점",
+            "address": "대한민국 서울특별시 강남구 논현로85길 11",
+            "lat": 37.4990047,
+            "lng": 127.0364632,
+            "imgUrl": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAeeoHcIxb5QqtUScwXF2j9wykUayDiMdyr8s3-LvHKNLNDLfkGR7OFv9UocHzft9C8vWIxW61jjePyUL_ZjVmqO-AY41p09oVuafyOO-lrNU6_zlmVOt_LzsbXNV9hsRMajmgMFuvZD0X6NnOBCqKUyeYfYBfZLinri-gmyPkNvgJNv1cdCEb9aKUyr6dL86U5vZR4oqumsUz64L6lZp6PU6_W21CVT9qasUDwCXQv2tttAoocxviRUSOm2mTJ2KR83NMhnnLyGE0vEtHWafpHkXQSUUTzn5hPnWlEB8CGlawAuoc8d_oaqkeplSC333YyGCB22x6UiiB5ca40xABEEya5gNq3j_A3Sivqo57Un_Mi440VSzLBsZM_sphVqvKOD7U8d0fUThG3K6ZmHOyTNGXnrAOuIp9wn_fiZ81z-DAuf4eE2xQdX-jcJ8t2kZRNpvQDt_7DsMn1A5mVfLGAqSrBCdb8VIMnG0hU358ce6qzSwSw96dX3FbY4JKIuAQ1S6gOp8zoG-KiAZnV0cqLuSHD7eR3zD0gNjyHndJBcvsoeb0_Inshwkuf0Z2EXQJjJB3J0Xm2II&3u200&4u200&5m1&2e1&callback=none&r_url=http%3A%2F%2Flocalhost%3A5173%2FcreatePlan&key=AIzaSyAK4cbvX2o69KnIi-grh9QEhjw-YrtgICQ&token=57778"
+          },
+          {
+            "id": "ChIJyYaiNVGhfDUR4ntsvin2gTI",
+            "name": "역삼1동 주민센터",
+            "address": "대한민국 서울특별시 강남구 역삼로7길 16",
+            "lat": 37.495188,
+            "lng": 127.0332163,
+            "imgUrl": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAeeoHcIBF5cWj3ay9_XUDnrsEemY1-vzXwCKwdYxj5c8M6aIKCTTKsdFkTVn7139DpnTeo3Lj4gG5LFa8ZwchV2qwUFt9tkYjSuAXLaZKdCk9XOyqUtiVbPoeftyz4zDeQ_Biw0pFHGAWwP8ivX0dru8_mmpueaM5ieiiTWEYRVrLltOJpi7ve5rJn89JUH_veYJJP1qIqSswC6HFRbE08_zMwcR5oKErTh0u2Pj0iYoB1-_FubQSsw6Yy_YRjk-n-ElZ7hikokjMoVsHlFpHtZT-_tR0fouImDysYArLZFlQs5HLDJJPsTVEFRK5gLpKZkJzfQUMMexrj9O6p4ZxigfhT2lIvBgd7fSqucGeEBYdU91Roj7mGop4XY8G6FiA5wzOBW_NIO3DgaQ-8Cx3Y8ticPPf34RXeU00LueRmM9kNPOBo0eqnjiQDQA6JhpGaInyOJ4rELN6al5HwHBeERqhy8UQ-3pOEQuD3M1H1J62DgpeFvjn_9b21nPQfgNy_Vk9FpnFrjvt_xzyukEP4gd8RBUa7BkA5OYzfkFoBeFK78m0awli0jkyULgHB-2lbcuSfT16w&3u200&4u200&5m1&2e1&callback=none&r_url=http%3A%2F%2Flocalhost%3A5173%2FcreatePlan&key=AIzaSyAK4cbvX2o69KnIi-grh9QEhjw-YrtgICQ&token=39664"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "20250508155508",
+      "title": "부산 서면으로 떠나볼까요?",
+      "startDate": "2025-05-08",
+      "endDate": "2025-05-08",
+      "userId": "user1",
+      "thumnailImg": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAeeoHcK1lsN2sA8gf2CsxHiLailrBLeakPmSi4I9pIGAD5ok1qYkDNiE4LC9MuOH2zUZOBb_zZ-6X8MH_PHHsSDh0knyY6708ot3oDyuIdgglECywZxVWml8oXhwBTAiOiuDjqjhvhiY5bEAJnvEDD7Unr8aacFYcKb2XWg9SxDcp4rBMJYaKrEEATYzMfnN02A7w1W01f_izPZs3goBn62tiOVVu4pRfIT9RVdM2g-v_p44ZxonFNQoRmmxloC11GX27NYNZzWVAGXB8_m3b8W93XDpYD2EpNuJisNAT6qzbSbtZUK61wSQNGCb31YlsgfvR1C9D08xDZyGWKRcpSFA9eiXYl9dr56RnoxX8EvZuYhZOUbavioEPtX3bZDETRs0Lu52rINFWvZZmbImRxKhVgidCJ2p8_-N3WHUtWQgaxEU8mf57zVqAzibkAoLwbCsq8R_F8MTajWE5n4uo-yKNzdbNcc29eR2vU8BafZHiYgn4JkqHwVsWSRUv1j71q8lPkcaoSd0vsDYmd2l5HjDjg_jXrNbbmZ73zcRjjXFMWj1cP9tBK0qnoqqb8pq_57ncAnuiQyE&3u200&4u200&5m1&2e1&callback=none&r_url=http%3A%2F%2Flocalhost%3A5173%2FcreatePlan&key=AIzaSyAK4cbvX2o69KnIi-grh9QEhjw-YrtgICQ&token=55096",
+      "schedule": [
+        [
+          {
+            "id": "ChIJR_AMB2_raDURtkNgS_8-3FQ",
+            "name": "서면역",
+            "address": "대한민국 부산광역시 부산진구 중앙대로 지하 730",
+            "lat": 35.15781570000001,
+            "lng": 129.0600331,
+            "imgUrl": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAeeoHcK1lsN2sA8gf2CsxHiLailrBLeakPmSi4I9pIGAD5ok1qYkDNiE4LC9MuOH2zUZOBb_zZ-6X8MH_PHHsSDh0knyY6708ot3oDyuIdgglECywZxVWml8oXhwBTAiOiuDjqjhvhiY5bEAJnvEDD7Unr8aacFYcKb2XWg9SxDcp4rBMJYaKrEEATYzMfnN02A7w1W01f_izPZs3goBn62tiOVVu4pRfIT9RVdM2g-v_p44ZxonFNQoRmmxloC11GX27NYNZzWVAGXB8_m3b8W93XDpYD2EpNuJisNAT6qzbSbtZUK61wSQNGCb31YlsgfvR1C9D08xDZyGWKRcpSFA9eiXYl9dr56RnoxX8EvZuYhZOUbavioEPtX3bZDETRs0Lu52rINFWvZZmbImRxKhVgidCJ2p8_-N3WHUtWQgaxEU8mf57zVqAzibkAoLwbCsq8R_F8MTajWE5n4uo-yKNzdbNcc29eR2vU8BafZHiYgn4JkqHwVsWSRUv1j71q8lPkcaoSd0vsDYmd2l5HjDjg_jXrNbbmZ73zcRjjXFMWj1cP9tBK0qnoqqb8pq_57ncAnuiQyE&3u200&4u200&5m1&2e1&callback=none&r_url=http%3A%2F%2Flocalhost%3A5173%2FcreatePlan&key=AIzaSyAK4cbvX2o69KnIi-grh9QEhjw-YrtgICQ&token=55096"
+          },
+          {
+            "id": "ChIJG7Fv02_raDUROnWS49QEK1o",
+            "name": "서면시장",
+            "address": "대한민국 부산광역시 부산진구 서면로 56",
+            "lat": 35.1557374,
+            "lng": 129.0581664,
+            "imgUrl": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAeeoHcK9Jq982BjtFHSvTjOBdl0QdH0O7saNY6Xo3nsAZyVoqdEaI1aKM3YWhT4zt1xlI5Tkzhu63G-E_X1tW6985OZ1NFhD1jK0PGHe62fC8Z27KrQ4KEeCeT3Xn8HOROPTRIubhIRsHMPEE4tZVPYO0t7458kGNlSRPmk5gJlOtOQZp_RTcORIYlKPTC590Ma5-Tk_Fw0hO9ivxxCcEoetiIhvCgRk0WCX7Oz3U997nHW2RcfTWfd_8JhJO9Ir0U-A9Y_uAbQYQeAXSuUQNn8mj8xwr7UtrwekAaPTM0np2eQWRP9V6o28GjM2IpbzW91aIbnCROKASMIG3FE4G2Cku2YNwmqDAeJ-ZlM4M4QBh1czEOH65-R3nmatgYRi_BBVJNR4IBhZuvwoJAyu7WKrd1hEwltz4WmpYkgon_D60-FrU_mvaAjoXkJh0000hC-UMkrOkzJxN2l-23KZVzo4OUH2xCUKhHKnTZzahWIbieQ-skiS_EZOW3ggqdqJJM3mIIkWSY4wKO4vM9lgjW7Xh9NGSLcCJYsXAqtr2icbEtQ9SxRiU4cU9DpVMCK49xTH5yhgxhnVWP3m7EhTd8iSqYijqUJ7KA&3u200&4u200&5m1&2e1&callback=none&r_url=http%3A%2F%2Flocalhost%3A5173%2FcreatePlan&key=AIzaSyAK4cbvX2o69KnIi-grh9QEhjw-YrtgICQ&token=121445"
+          },
+          {
+            "id": "ChIJYeuKwGTraDUR-U5PAfT2Uoo",
+            "name": "전포카페거리",
+            "address": "대한민국 부산광역시 부산진구 동천로 92",
+            "lat": 35.1554021,
+            "lng": 129.0638741,
+            "imgUrl": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAeeoHcJJjO1XmKLV0jHFTyVEReu2b9s424sB5JeJtKHNej_oOZCI0UpAiQ8oioBKYOG48TALUHxuAckYiebKcqnGbDXwrqIHgAmfcjVkc2zaVKZNFDTYX1K5VJcOb71VXT8cnNNIqs9jeBzk-gc4gttYMohjxCR0KtBIvWI9Lf-SwFg6UCottYr2Ihrh0a4j3nYJccSje6w98wlSkFGV9Ptj-75ExUxSA3BFxK4GWMMQUKetbXpbHUNhxkmgFtzchzOlvcFZt5M9dmPY0wjfn9Km-neikOudOJurirRABPq4jCa3FDW_aKtUS0-FBu9OVd3ZcT02NOTiM-TarMzkgXEYqgADBFu5Gq4d2ExYzrwRS5LJ2xjT3mR_ZEz_WcZ9X_1Hqv5oa5sO9q8n0DYSAlWOUGJB7LtZ0WyCQkstlQsVlBJMouJOSsgqTpHK17UweG_HZR1RPGWpWPnJBsihwXhLSolY6jxLuV7JKVFr7PhDolUOH_b8mKNGuZhBiWcfsA3uI2Zl34-mZOzPHp8dkK3O9BhNLYTpLmeU_Z8GvpfCuJ-eKUgj3FwAykIWBI2RzFIz6lVG2KEb&3u200&4u200&5m1&2e1&callback=none&r_url=http%3A%2F%2Flocalhost%3A5173%2FcreatePlan&key=AIzaSyAK4cbvX2o69KnIi-grh9QEhjw-YrtgICQ&token=68358"
+          }
+        ]
+      ]
     }
   ]
 }

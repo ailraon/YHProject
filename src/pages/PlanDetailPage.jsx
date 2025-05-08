@@ -1,7 +1,8 @@
 import React from 'react';
+import GoogleMapReadOnly from '../components/common/GoogleMapReadonly';
 
 const PlanDetailPage = () => {
-  return <div>PlanDetailPage</div>;
+  return <GoogleMapReadOnly></GoogleMapReadOnly>;
 };
 
 export default PlanDetailPage;

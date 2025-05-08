@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from '../../assets/MainLogo.png';
+import useUserStore from '../../store/useUserStore';
 
 const Navbar = styled.nav`
   height: 80px;
@@ -24,7 +25,7 @@ const Logo = styled.div`
 
 const LogoImg = styled.img`
   width: 80px;
-`
+`;
 
 const LinkList = styled.ul`
   list-style: none;
@@ -49,17 +50,26 @@ const NavLink = styled(Link)`
 
 const Nav = () => {
   // 테스트 용으로 로그인 상태 관리만 잠시 작성
-  const [isLogin, setIsLogin] = useState(false);
+  const { user, isLoggedIn, logout } = useUserStore();
 
-  const toggleLogin = () => {
-    setIsLogin((prev) => !prev);
+  const logoutAction = () => {
+    if (confirm('정말 삭제하시겠습니까??') == true) {
+      //확인
+      logout();
+    } else {
+      //취소
+      return false;
+    }
   };
 
   return (
     <Navbar>
       <ContentBox>
         <Logo>
-          <NavLink to="/"><LogoImg src={logo} alt="" />여행하마</NavLink>
+          <NavLink to="/">
+            <LogoImg src={logo} alt="" />
+            여행하마
+          </NavLink>
         </Logo>
         <LinkList>
           <Menu>
@@ -68,11 +78,8 @@ const Nav = () => {
           <Menu>
             <NavLink to="/createPlan">일정 생성</NavLink>
           </Menu>
-          {!isLogin ? (
+          {!isLoggedIn ? (
             <>
-            <Menu>
-              <button onClick={toggleLogin}>로그인</button>
-            </Menu>
               <Menu>
                 <NavLink to="/login">로그인</NavLink>
               </Menu>
@@ -80,13 +87,17 @@ const Nav = () => {
           ) : (
             <>
               <Menu>
-                <button onClick={toggleLogin}>로그아웃</button>
+                <NavLink to="/mypage">마이페이지</NavLink>
               </Menu>
+              <div>
+                <p>
+                  환영합니다. <strong>{user.name}</strong> 님
+                </p>
+              </div>
               <Menu>
-                <NavLink to="/login">마이페이지</NavLink>
-              </Menu>
-              <Menu>
-                <NavLink to="/login">로그아웃</NavLink>
+                <NavLink to="/" onClick={logoutAction}>
+                  로그아웃
+                </NavLink>
               </Menu>
             </>
           )}

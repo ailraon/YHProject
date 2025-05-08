@@ -1,4 +1,6 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -48,16 +50,16 @@ const ActionButton = styled.button`
 `;
 
 const RegisterPage = () => {
-  const [username, setUsername] = useState('');
+  const [id, setId] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
   const [error, setError] = useState('');
-  const history = useHistory(); // 페이지 이동을 위한 history 객체
+  const navigate = useNavigate(); // 페이지 이동을 위한 history 객체
 
   // 유효성 검사
   const validateForm = () => {
-    if (!username || !password || !name || !age) {
+    if (!id || !password || !name || !age) {
       return '모든 필드를 입력해 주세요.';
     }
 
@@ -85,15 +87,18 @@ const RegisterPage = () => {
     try {
       // 사용자 정보를 json-server로 POST 요청
       const response = await axios.post('http://localhost:5000/users', {
-        username,
+        id,
         password,
         name,
         age,
       });
+      console.log(response);
 
       // 회원가입 성공 시 로그인 페이지로 이동
-      history.push('/login');
+      // history.push('/login');
+      navigate('/login');
     } catch (error) {
+      console.log('error : ', error);
       setError('회원가입 실패. 다시 시도해 주세요.');
     }
   };
@@ -104,12 +109,7 @@ const RegisterPage = () => {
       <form action="post" onSubmit={handleRegister}>
         <Label htmlFor="">아이디</Label>
         <InputBox>
-          <Input 
-            type="text" 
-            placeholder="아이디를 입력하세요." 
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
+          <Input type="text" placeholder="아이디를 입력하세요." value={id} onChange={(e) => setId(e.target.value)} />
         </InputBox>
         <Label htmlFor="">비밀번호</Label>
         <InputBox>
@@ -122,21 +122,11 @@ const RegisterPage = () => {
         </InputBox>
         <Label htmlFor="">이름</Label>
         <InputBox>
-          <Input 
-            type="text"
-            placeholder="이름을 입력하세요."
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
+          <Input type="text" placeholder="이름을 입력하세요." value={name} onChange={(e) => setName(e.target.value)} />
         </InputBox>
         <Label htmlFor="">나이</Label>
         <InputBox>
-          <Input 
-            type="number"
-            placeholder="나이를 입력하세요."
-            value={age}
-            onChange={(e) => setAge(e.target.value)}
-          />
+          <Input type="number" placeholder="나이를 입력하세요." value={age} onChange={(e) => setAge(e.target.value)} />
         </InputBox>
         <ActionButton>회원가입</ActionButton>
       </form>
